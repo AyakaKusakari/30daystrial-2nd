@@ -1,0 +1,15 @@
+.floating {
+	bottom: 40px;
+	display: none;
+	position: fixed;
+	right: 93px;
+    z-index: 30;
+    @include media('tab') {
+        bottom: 16px;
+        right: 16px;
+    }
+    &:hover {
+        box-shadow: 0 3px 5px #3E3E3E;
+        transition: all 0.3s ease 0s;
+    }
+}

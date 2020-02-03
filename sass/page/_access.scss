@@ -1,0 +1,105 @@
+@import "../setting/_config.scss";
+
+#access {
+    color: $white;
+    background-color: #3E3E3E;
+    width: 980px;
+    height: 570px;
+    margin-bottom: 205px;
+    @include media('tab') {
+        width: 100%;
+        height: auto;
+    }        
+    @include media('sp') {
+        margin-bottom: 0;
+    }
+    .inner {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        @include media('sp') {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        margin-left: 93px;
+        margin-right: 92px;
+        @include media('tab') {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        display: flex;
+        width: 1180px;
+        max-width: 1180px;
+        @include media('tab') {
+            width: 100%;
+            padding-left: 93px;
+            padding-right: 92px;
+            display: block;
+        }
+        @include media('sp') {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        .access-items {
+            margin-right: 135px;
+            .access-title {
+                @include h2;
+                font-weight: bold;
+                margin-bottom: 40px;
+                @include media('sp') {
+                    margin-bottom: 30px;
+                }
+            }
+            .address {
+                font-family: YuGothic,'Yu Gothic',sans-serif;
+                line-height: 26px;
+                margin-bottom: 35px;
+                @include media('sp') {
+                    font-size: 12px;
+                    margin-bottom: 13px;
+                }
+            }
+            .map-btn-top {
+                @include btnBlack;
+                letter-spacing: 2px;
+                padding: 19px 83px;
+            }
+            .map-btn-top {
+                @include media('tab') {
+                    display: none;
+                }
+            }
+        }
+        .googlemap {
+            box-shadow: 0 5px 12px $black;
+            iframe {
+                @media screen and (max-width: 1280px) {
+                    width: 515px;
+                }
+            }
+            @include media('tab') {
+                height: 0;
+                overflow: hidden;
+                padding-bottom: 70%;
+                position: relative;
+                margin-bottom: 40px;
+                iframe {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .map-btn-bottom {
+            display: none;
+            @include btnBlack;
+            letter-spacing: 2px;
+            padding: 19px 83px;
+            @include media('tab') {
+                display: block;
+            }
+            
+        }
+    }
+}

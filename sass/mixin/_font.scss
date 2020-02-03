@@ -1,0 +1,30 @@
+@import "../setting/_config.scss";
+
+@mixin fontBlack {
+    color: #3E3E3E;
+}
+
+@mixin fontWhite {
+    color: #FFFFFF;
+}
+
+@mixin fontMedium {
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+}
+
+@mixin fontRegular {
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+}
+
+@mixin fontSemibold {
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+}
+
+@mixin h2 {
+    font-size: 36px;
+    @include fontSemibold;
+    @include media('tab') {
+        font-size: 30px;
+    }
+}
+

@@ -1,0 +1,104 @@
+@import "../setting/_config.scss";
+
+#footer {
+    background-color: $black;
+    color: $white;
+    .inner {
+        width: 1180px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        display: flex;
+        justify-content: space-between;
+        @include media('tab') {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        @include media('sp') {
+            display: block;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 92px;
+        }
+        .footer-left {
+            .sns-icon {
+                margin-bottom: 39px;
+                .fa-twitter {
+                    opacity: 0.6;
+                    font-size: 36px;
+                    margin-right: 20px;
+                    &:hover {
+                        opacity: 1;
+                        transition: all 0.3s ease 0s;
+                    }
+                    @include media('sp') {
+                        margin-right: 135px;
+                    }
+                }
+                .fa-facebook-square {
+                    opacity: 0.6;
+                    font-size: 36px;
+                    &:hover {
+                        opacity: 1;
+                        transition: all 0.3s ease 0s;
+                    }
+                }
+            }
+            .footer-nav {
+                .footer-list {
+                    
+                    .footer-menu {
+                        font-size: 18px;
+                        letter-spacing: 0.45px;
+                        &:not(:last-of-type) {
+                            margin-bottom: 16px;
+                        }
+                        &:hover {
+                            opacity: 0.5;
+                            transition: all 0.3s ease 0s;
+                        }
+                        @include media('sp') {
+                            font-size: 14px;
+                            display: inline-block;
+                            &:not(:last-of-type) {
+                                margin-right: 68px;
+                            }
+                            @media screen and (max-width: 521px) {
+                                &:not(:last-of-type) {
+                                    margin-right: 0;
+                                }
+                                &:first-of-type {
+                                    margin-right: 136px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-right {
+            margin-top: 50px;
+            @include media('sp') {
+                margin-top: 57px;
+            }
+            .footer-logo {
+                font-size: 44px;
+                letter-spacing: 0;
+                color: #E3E3E3;
+                margin-bottom: 16px;
+                @include media('sp') {
+                    font-size: 34px;
+                    margin-bottom: 8px;
+                }
+            }
+            .copy {
+                font-size: 12px;
+                opacity: 0.6;
+                text-align: right;
+                letter-spacing: 0.3px;
+                @include media('sp') {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

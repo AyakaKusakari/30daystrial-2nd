@@ -1,0 +1,22 @@
+@import "base/_base.scss";
+@import "base/_reset.scss";
+
+@import "mixin/_btn.scss";
+@import "mixin/_font.scss";
+@import "mixin/_color.scss";
+@import "mixin/_hover.scss";
+
+@import "page/_header.scss";
+@import "page/_main.scss";
+@import "page/_news.scss";
+@import "page/_service.scss";
+@import "page/_results.scss";
+@import "page/_price.scss";
+@import "page/_comments.scss";
+@import "page/_faqs.scss";
+@import "page/_access.scss";
+@import "page/_contact.scss";
+@import "page/_footer.scss";
+@import "page/floating.scss";
+
+@import "setting/_config.scss";

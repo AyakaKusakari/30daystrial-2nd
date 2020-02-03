@@ -1,0 +1,95 @@
+@import "../setting/_config.scss";
+
+#comments {
+    color: $black;
+    position: relative;
+    background-color: #3E3E3E;
+    width: 980px;
+    height: 597px;
+    @include media('sp') {
+        height: 450px;
+    }
+    @media screen and (max-width: 1280px) {
+        width: 100%;
+    }
+    .inner {
+        .comments-items {
+            position: absolute;
+            top: -150px;
+            left: 93px;
+            width: 644px;
+            @media screen and (max-width: 1280px) {
+                width: calc(100% - 186px);
+                margin-right: 93px;
+                margin-left: 93px;
+                left: 0;
+            }
+            @include media('sp') {
+                top: -60px;
+                width: calc(100% - 32px);
+                margin-right: 16px;
+                margin-left: 16px;
+                height: 450px;
+            }
+            height: 616px;
+            padding: 80px 43px 120px 40px;
+            @include media('sp') {
+                padding: 40px 20px;
+            }
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 10px #000000;
+            .comments-title {
+                @include h2;
+                margin-bottom: 80px;
+                @include media('sp') {
+                    margin-bottom: 40px;
+                }
+            }
+            .comments-item {
+                display: flex;
+                &:first-of-type {
+                    margin-bottom: 74px;
+                    @include media('sp') {
+                        margin-bottom: 30px;
+                    }
+                }
+                .comments-item-img {
+                    margin-right: 50px;
+                    @include media('sp') {
+                        margin-right: 24px;
+                        width: 56px;
+                        height: 56px;
+                    }
+                }
+                .comments-item-txt {
+                    width: 414px;
+                    font-size: 16px;
+                    letter-spacing: 0;
+                    line-height: 26px;
+                    margin-top: 3px;
+                    @media screen and (max-width: 1280px) {
+                        width: 100%;
+                    }
+                    @include media('sp') {
+                        width: 73%;
+                        font-size: 14px;
+                        line-height: 22px;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        .comments-img {
+            position: absolute;
+            top: -23px;
+            left: 737px;
+            img {
+                max-width: initial;
+                width: 537px;
+            }
+            @media screen and (max-width: 1280px){
+                display: none;
+            }
+        }
+    }
+}

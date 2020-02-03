@@ -1,0 +1,68 @@
+@import "../setting/_config.scss";
+
+#main {
+    height: 648px;
+    @include media('sp') {
+        height: 667px;
+        padding: 0 16px;
+    }
+    background: url(../img/mv.png);
+    background-size: cover;
+    background-position: center center;
+    @include media('sp') {
+        background-position: -252px 0;
+    }
+    background-repeat: no-repeat;
+    position: relative;
+
+    .main-content {
+        position: absolute;
+        color: #3E3E3E;
+        top: 54%;
+        -webkit-transform : translateY(-50%);
+        transform : translateY(-50%);
+        right: 8%;
+        max-width: 524px;
+        @include media('tab') {
+            top: 50%;
+            left: 50%;
+            right: 0;
+            -webkit-transform : translate(-50%,-50%);
+            transform : translate(-50%,-50%);
+        }
+        @include media('sp') {
+            width: 336px;
+            top: 49.5%;
+        }
+        .main-title {
+            font-size: 30px;
+            @include media('sp') {
+                font-size: 24px;
+                line-height: 45px;
+            }
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+        .main-text {
+            font-size: 18px;
+            @include media('sp') {
+                font-size: 16px;
+            }
+            margin-bottom: 40px;
+            letter-spacing: 0.45px;
+        }
+        .btn-wrapper {
+            @include media('sp') {
+                text-align: center;
+            }
+            .main-btn {
+                @include btnOrange;
+                @include media('sp') {
+                    padding: 12px 24px;
+                }
+            }
+        }
+    }
+
+
+}

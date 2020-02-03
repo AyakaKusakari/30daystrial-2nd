@@ -1,0 +1,151 @@
+@import "../setting/_config.scss";
+
+#news {
+    color: $black;
+
+    @include media('sp') {
+        position: relative;
+        height: 608px;
+    }
+    .inner {
+        padding: 130px 0px;
+
+        @media screen and (max-width: 1199px) {
+            padding: 130px 16px;
+        }
+        width: 1180px;
+
+        .news-items {
+            padding: 60px 50px 40px 50px;
+            background-color: #FFFFFF;
+            box-shadow: 0 5px 12px $black;
+            @include media('sp') {
+                margin-bottom: 60px;
+            }
+            @include media('sp') {
+                position: absolute;
+                top: -40px;
+                left: 0;
+                width: calc(100% - 32px);
+                margin-right: 16px;
+                margin-left: 16px;
+                padding: 40px 16px;
+            }
+            .news-title {
+                text-align: center;
+                @include h2;
+                margin-bottom: 60px;
+                @include media('sp') {
+                    margin-bottom: 40px;
+                }
+            }
+            .entries {
+                .news-item {
+                    display: flex;
+                    @include media('tab') {
+                        display: block;
+                    }
+                    position: relative;
+                    border-bottom: 1px solid #CECDCD;
+                    padding-top: 42px;
+                    padding-bottom: 38px;
+                    @include media('sp') {
+                        padding-top: 18px;
+                        padding-bottom: 15px;
+                    }
+                    &:first-of-type {
+                        border-top: 1px solid #CECDCD;
+                        padding-top: 37px;
+                        @include media('sp') {
+                            padding-top: 16px;
+                        }
+                    }
+                    &::after {
+                        display: inline-block;
+                        position: absolute;
+                        width: 14.85px;
+                        height: 25.5px;
+                        background: url(../img/news-arrow.png) no-repeat center center;
+                        content: "";
+                        right: 5px;
+                        top: 42px;
+                        @include media('sp') {
+                            right: -6px;
+                        }
+                    }
+                    .news-item-meta {
+                        display: flex;
+                        height: 27px;
+                    }
+                    &:hover {
+                        background-color: rgba(73, 115, 255, 0.2);
+                        transition: all 0.3s ease 0s;
+                    }
+                }
+
+                .news-item-meta{
+                    margin-right: 60px;
+                    @include media('tab') {
+                        margin-bottom: 13px;
+                    }
+                    @include media('sp') {
+                        margin-bottom: 3px;
+                    }
+                }
+                .news-item-published {
+                    @include fontRegular;
+                    font-size: 18px;
+                    width: 117px;
+                    margin-right: 50px;
+                    letter-spacing: 0.45px;
+                    text-align: center;
+                    @include media('sp') {
+                        font-size: 14px;
+                        text-align: left;
+                        width: 78px;
+                        margin-right: 18px;
+                    }
+                }
+                .news-item-tag {
+                    font-size: 14px;
+                    width: 125px;
+                    text-align: center;
+                    letter-spacing: 0.35px;
+                    border: 2px solid $blue;
+                    border-radius: 50px;
+                    @include media('sp') {
+                        font-size: 12px;
+                        width: 89px;
+                    }
+                }
+                .news-item-excerpt {
+                    @include fontMedium;
+                    font-size: 18px;
+                    letter-spacing: 0.45px;
+                    width: 680px;
+                    @media screen and (max-width: 1199px) {
+                        width: 600px;
+                    }
+                    @include media('tab') {
+                        width: 95%;
+                    }
+                    @include media('sp') {
+                        font-size: 14px;
+                        letter-spacing: -0.35px;
+                        width: 90%;
+                    }
+                }
+            }
+            .btn-wrapper {
+                text-align: center;
+                margin-top: 41px;
+                @include media('sp') {
+                    margin-top: 37px;
+                }
+                .more-btn {
+                    @include btnWhite;
+                }
+            }
+        }
+    }
+}
